@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "CF Problems Toggle",
+    "version": "1.0.0",
+    "description": "Changes the background color of Codeforces to blue.",
+    "action":{},
+    "permissions": ["activeTab", "storage","scripting"],
+    "host_permissions": ["https://codeforces.com/"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://codeforces.com/*"],
+        "js": ["content.js"]
+      }
+    ]
+  }
+  
